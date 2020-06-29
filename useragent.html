@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script src='//unpkg.com/jquery@3.3.1/dist/jquery.min.js'></script>
+    <div id="text"></div>
+    <script>
+    var devices = [{"name":"Galaxy Z Flip","model":"SM-F700F"},{"name":"Galaxy Fold","model":"SM-F9000"},{"name":"Galaxy Note10+","model":"SM-N9750"},{"name":"Galaxy Note10","model":"SM-N9700"},{"name":"Galaxy Note10 Lite","model":"SM-N770F"},{"name":"Galaxy Note9","model":"SM-N9600"},{"name":"Galaxy Note8","model":"SM-N9500"},{"name":"Galaxy Note5","model":"SM-N9200"},{"name":"Galaxy S20 Ultra","model":"SM-G9880"},{"name":"Galaxy S20+","model":"SM-G9860"},{"name":"Galaxy S20","model":"SM-G9810"},{"name":"Galaxy S10+","model":"SM-G9750"},{"name":"Galaxy S10","model":"SM-G9730"},{"name":"Galaxy S10e","model":"SM-G9700"},{"name":"Galaxy S9+","model":"SM-G9650"},{"name":"Galaxy S9","model":"SM-G9600"},{"name":"Galaxy S8+","model":"SM-G9550"},{"name":"Galaxy S8","model":"SM-G9500"},{"name":"Galaxy S7 edge","model":"SM-G9350"},{"name":"Galaxy S7","model":"SM-G930F"},{"name":"Galaxy S6 edge+","model":"SM-G9287"},{"name":"Galaxy A80","model":"SM-A8050"},{"name":"Galaxy A71","model":"SM-A715F"},{"name":"Galaxy A70","model":"SM-A7050"},{"name":"Galaxy A60","model":"SM-A6060"},{"name":"Galaxy A51","model":"SM-A515F"},{"name":"Galaxy A50s","model":"SM-A5070"},{"name":"Galaxy A9","model":"SM-A9200"},{"name":"Galaxy A8s","model":"SM-G8870"},{"name":"Galaxy A8 Star","model":"SM-G8850"},{"name":"Galaxy A8+","model":"SM-A730F"},{"name":"Galaxy C9 Pro","model":"SM-C9000 "},{"name":"Galaxy C7 Pro","model":"SM-C7010"},{"name":"Galaxy C5 Pro","model":"SM-C5010"}];
+
+    var ua = navigator.userAgent;
+    for (let i = 0; i < devices.length; i++) {
+        var device = devices[i];
+        if(ua.indexOf(device.model) !== -1) {
+            $('#text').html('Samsung Device!');
+        }
+    }
+    </script>
+
+
+    
+</body>
+</html>
